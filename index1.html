@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Super Stickman Jump Adventure</title>
+    <!-- CSS ফাইল লিংক করা হলো -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gameContainer">
+        <!-- মেঘ এর ব্যাকগ্রাউন্ড -->
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+
+        <!-- ইউআই বা স্কোরবোর্ড -->
+        <div id="uiLayer">
+            <div id="scoreBox" class="score-box">Score: ⭐ 0</div>
+            <div id="highScoreBox" class="score-box">High: 🏆 0</div>
+        </div>
+
+        <!-- স্টিকম্যান হিরো -->
+        <div id="stickman">
+            <div class="head"></div>
+            <div class="torso"></div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="leg left"></div>
+            <div class="leg right"></div>
+        </div>
+
+        <!-- লাল কিউট বাধা -->
+        <div id="obstacle"></div>
+
+        <!-- সবুজ ঘাস ও মাটি -->
+        <div id="ground"></div>
+
+        <!-- বাটনটি এখন নিচে ডান কোনায় (Nice Corner) -->
+        <button id="jumpButton">JUMP 🚀</button>
+
+        <!-- স্টার্ট স্ক্রিন -->
+        <div id="startScreen" class="screen-overlay">
+            <h1>Stickman Jump Adventure!</h1>
+            <p>বাচ্চাদের জন্য তৈরি সহজ এবং মজার গেম! 👶✨</p>
+            <button class="action-btn" onclick="startGame()">Start Game ▶️</button>
+        </div>
+
+        <!-- গেম ওভার স্ক্রিন -->
+        <div id="gameOverScreen" class="screen-overlay">
+            <h1>Try Again! 😭</h1>
+            <p id="finalScoreText">তোমার স্কোর: 0</p>
+            <button class="action-btn" style="background:#E67E22;" onclick="startGame()">Play Again 🔄</button>
+        </div>
+    </div>
+
+    <!-- JavaScript ফাইল লিংক করা হলো -->
+    <script src="script.js"></script>
+</body>
+</html>
